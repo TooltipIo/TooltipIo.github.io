@@ -144,9 +144,31 @@
     </div>
 </div>
 </body>
-  <script>
 
+<!--- Autoclose script for links --->
+<script type='text/javascript'>
+document.querySelectorAll(".help-item").forEach(function(item){
+	item.addEventListener("click", function(event){
+		if(event.isTrusted){
+		  try {
+		     event.stopPropagation();
+		     event.preventDefault();
+		     event.cancelBubble = true;
+		     event.stopImmediatePropagation();
+		}catch(e){
+
+		}
+
+		Signalayer.API.hideAllCampaigns();
+
+			setTimeout(function(){
+				item.dispatchEvent(event);
+			}, 10);
+		}
+	});
+})
   </script>
+<!--- Autoclose script for links END --->
 </html>
   
   
