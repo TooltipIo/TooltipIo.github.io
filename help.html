@@ -20,7 +20,7 @@
             };
             window.Signalayer = {cs: [], _apiKey: o.key};
             for (
-                var r = ["identify", "goal", "updateUserData", "start", "stop", "refresh", "show", "hide", "on"],
+                var r = ["identify", "goal", "updateUserData", "hideAllCampaigns", "start", "stop", "refresh", "show", "hide", "on"],
                     i = {}, n = 0; n < r.length; n++) {
                 var a = r[n];
                 i[a] = function (t) {
@@ -143,6 +143,14 @@
         </div>
     </div>
 </div>
-</body></html>
+</body>
+  <script>
+document.querySelectorAll(".help-item").forEach(function(item){
+item.addEventListener("click", function(e){
+Signalayer.API.hideAllCampaigns();
+});
+})
+  </script>
+</html>
   
   
