@@ -145,18 +145,7 @@
 </div>
 </body>
   <script>
-document.querySelectorAll(".help-item").forEach(function(item){
-item.addEventListener("click", function(event){
-  try {
-event.stopPropagation();
-            event.preventDefault();
-            event.cancelBubble = true;
-            event.stopImmediatePropagation();  
-}catch(e){}
 
-Signalayer.API.hideAllCampaigns();
-});
-})
   </script>
 </html>
   
