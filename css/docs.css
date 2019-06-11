@@ -99,7 +99,8 @@
   font-family: "Brandon Text", sans-serif;
   font-weight: 500;
   font-size: 36px;
-  color: #333;
+  color: #333
+  margin-top: 45px;
 }
 
 .docs-layout .docs-container h2 {
