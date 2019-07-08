@@ -1,10 +1,16 @@
 <!DOCTYPE html>
-<html data-wf-page="5caca133b32e3912cfd581af" data-wf-site="5caca133b32e396298d581b0">
+<html lang="en-US"
+      xmlns:og="http://opengraphprotocol.org/schema/"
+      xmlns:fb="http://www.facebook.com/2008/fbml" prefix="og: http://ogp.me/ns#">
 <head>
     <meta charset="utf-8">
     <meta name="google-site-verification" content="hvIUITuxZack0AWUAn_Kuz0kbAZKqAruTo34aCLti78" />
     <title>Tooltip.io - In-App Messaging Suite for the Web</title>
     <link href="css/docs.css" type="text/css" rel="stylesheet"/>
+
+    <meta property="og:locale" content="en_US" />
+    <meta property="og:type" content="website" />
+
     <meta
         content="Onboard new users, educate customers and run in-product marketing with ease. Without help from developers."
         name="description">
@@ -28,93 +34,10 @@
         var n = c.documentElement, t = " w-mod-";
         n.className += t + "js", ("ontouchstart" in o || o.DocumentTouch && c instanceof DocumentTouch) && (n.className += t + "touch")
     }(window, document);</script>
-    <link href="images/Favicon-162x.ico" rel="shortcut icon" type="image/x-icon"/>
+    <link href="/images/favicon.ico" rel="shortcut icon" type="image/x-icon">
     <link href="images/Webclip.png" rel="apple-touch-icon">
-    <!--- Tooltip.io player -->
-    <script type='text/javascript'>
-        window.Tooltip || function (t, e) {
-            var o = {
-                url: "https://cdn.tooltip.io/static/player.js",
-                key: "BgGp1VcuH7wEX15ZVnG4Uo3quCIF_0W3fiYbok8IIZI",
-                async: true
-            };
-            window.Tooltip = {cs: [], _apiKey: o.key};
-            for (
-                var r = ["identify", "goal", "updateUserData", "start", "stop", "refresh", "show", "hide", "on"],
-                    i = {}, n = 0; n < r.length; n++) {
-                var a = r[n];
-                i[a] = function (t) {
-                    return function () {
-                        var e = Array.prototype.slice.call(arguments);
-                        window.Tooltip.cs.push({method: t, args: e})
-                    }
-                }(a)
-            }
-            window.Tooltip.API = i;
-            var n = t.createElement(e), s = t.getElementsByTagName(e)[0];
-            n.type = "text/javascript", n.async = o.async, s.parentNode.insertBefore(n, s), n.src = o.url
-        }(document, "script");
-    </script>
-    <!--- Tooltip.io player -->
-    <script>
-        !function (e, n, t, r) {
-            function o() {
-                try {
-                    var e;
-                    if ((e = "string" == typeof this.response ? JSON.parse(this.response) : this.response).url) {
-                        var t = n.getElementsByTagName("script")[0], r = n.createElement("script");
-                        r.async = !0, r.src = e.url, t.parentNode.insertBefore(r, t)
-                    }
-                } catch (e) {
-                }
-            }
 
-            var s, p, a, i = [], c = [];
-            e[t] = {
-                init: function () {
-                    s = arguments;
-                    var e = {
-                        then: function (n) {
-                            return c.push({type: "t", next: n}), e
-                        }, catch: function (n) {
-                            return c.push({type: "c", next: n}), e
-                        }
-                    };
-                    return e
-                }, on: function () {
-                    i.push(arguments)
-                }, render: function () {
-                    p = arguments
-                }, destroy: function () {
-                    a = arguments
-                }
-            }, e.__onWebMessengerHostReady__ = function (n) {
-                if (delete e.__onWebMessengerHostReady__, e[t] = n, s) for (var r = n.init.apply(n, s), o = 0; o < c.length; o++) {
-                    var u = c[o];
-                    r = "t" === u.type ? r.then(u.next) : r.catch(u.next)
-                }
-                p && n.render.apply(n, p), a && n.destroy.apply(n, a);
-                for (o = 0; o < i.length; o++) n.on.apply(n, i[o])
-            };
-            var u = new XMLHttpRequest;
-            u.addEventListener("load", o), u.open("GET", "https://" + r + ".webloader.smooch.io/", !0), u.responseType = "json", u.send()
-        }(window, document, "Smooch", "5cb85731681a420010f04554");
-    </script>
-    <script>
-        Smooch.init({
-            appId: '5cb85731681a420010f04554',
-            customText: {
-                headerText: 'Let\'s chat',
-
-            }
-        }).then(function () {
-        });
-    </script>
-    <script>
-        Tooltip.API.on("open_smooch", function () {
-            Smooch.open();
-        });
-    </script>
+    <script type='text/javascript' src="js/custom.js"></script>
 
     <!-- Global site tag (gtag.js) - Google Analytics -->
     <script async src="https://www.googletagmanager.com/gtag/js?id=UA-57450003-1"></script>
