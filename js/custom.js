@@ -1,6 +1,6 @@
 window.Signalayer || function (t, e) {
     var o = {
-        url: "https://cdn.signalayer.com/static/player.js",
+        url: "https://cdn.tooltip.io/static/player.js",
         key: "BgGp1VcuH7wEX15ZVnG4Uo3quCIF_0W3fiYbok8IIZI",
         async: true
     };
