@@ -67,6 +67,22 @@ window.Signalayer || function (t, e) {
     u.addEventListener("load", o), u.open("GET", "https://" + r + ".webloader.smooch.io/", !0), u.responseType = "json", u.send()
 }(window, document, "Smooch", "5cb85731681a420010f04554");
 
+// read decoded cookie
+function getCookie(cname) {
+    var name = cname + "=";
+    var decodedCookie = decodeURIComponent(document.cookie);
+    var ca = decodedCookie.split(';');
+    for(var i = 0; i <ca.length; i++) {
+        var c = ca[i];
+        while (c.charAt(0) === ' ') {
+            c = c.substring(1);
+        }
+        if (c.indexOf(name) === 0) {
+            return c.substring(name.length, c.length);
+        }
+    }
+    return "";
+}
 
 Smooch.init({
     appId: '5cb85731681a420010f04554',
@@ -74,6 +90,9 @@ Smooch.init({
         headerText: 'Let\'s chat',
     }
 }).then(function () {
+    Smooch.updateUser({
+      userId: getCookie('tp_user_id')
+    });
     Signalayer.API.on("open_smooch", function () {
         Smooch.open();
     });
