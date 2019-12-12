@@ -3,6 +3,22 @@
       xmlns:og="http://opengraphprotocol.org/schema/"
       xmlns:fb="http://www.facebook.com/2008/fbml" prefix="og: http://ogp.me/ns#">
 <head>
+      
+      <style>
+        #frameContainer {
+            position: absolute;
+            left: 0;
+            right: 0;
+            top: 0;
+            bottom: 0;
+            border: 0;
+            height: 100%;
+            min-width: 100%;
+            width: 100%;
+            -webkit-overflow-scrolling: touch;
+            overflow-x: auto;
+        }
+    </style>
     <meta charset="utf-8"/>
     <title>Tooltip.io - Help Center</title>
     <link href="css/custom.css" rel="stylesheet" type="text/css"/>
@@ -47,6 +63,8 @@
 
 
 <body class="body">
+      
+      <!---
 <div data-collapse="medium" data-animation="default" data-duration="400" class="navbar w-nav">
     <div class="w-container"><a href="https://tooltip.io" class="w-nav-brand"><img
         src="https://uploads-ssl.webflow.com/5ce3fb4b7264069671fa733a/5ce3fc7a726406453ffa7bfd_Logo-new-new-new-new.png"
@@ -83,9 +101,12 @@
         </div>
     </div>
 </div>
+-->
+      
+      <iframe id="frameContainer" src="https://tooltip.customerly.help"></iframe>
 </body>
 
-<!--- Autoclose script for links --->
+<!--- Autoclose script for links 
 <script type='text/javascript'>
     document.querySelectorAll(".help-item").forEach(function (item) {
         item.addEventListener("click", function (event) {
@@ -107,7 +128,7 @@
             }
         });
     })
-</script>
+</script>--->
 <!--- Autoclose script for links END --->
 </html>
   
