@@ -83,7 +83,7 @@ function getCookie(cname) {
     }
     return "";
 }
-
+/**
 Smooch.init({
     appId: '5cb85731681a420010f04554',
     customText: {
@@ -97,3 +97,4 @@ Smooch.init({
         Smooch.open();
     });
 });
+**/
