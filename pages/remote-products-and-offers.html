@@ -54,6 +54,68 @@
   </script>
 
   <script async src="https://cdn.builder.io/js/webcomponents"></script>
+
+  <style>
+    .container-tooltip {
+      display: flex;
+      justify-content: space-between;
+      background-color: #fff;
+      padding: 10px;
+      border-radius: 8px;
+    }
+
+    .column-tooltip {
+      flex: 1;
+      margin: 0 10px;
+    }
+
+    .column-tooltip h2 {
+      color: #333;
+      font-size: 18px;
+      margin-bottom: 20px;
+      border-bottom: 2px solid #333;
+      padding-bottom: 5px;
+    }
+
+    .item-tooltip {
+      background-color: #f1f0f0;
+      border-radius: 5px;
+      padding: 10px;
+      margin-bottom: 10px;
+      font-size: 14px;
+      color: #333;
+      text-align: center;
+      cursor: pointer;
+      transition: background-color 0.3s;
+    }
+
+    .item-tooltip a {
+      color: #333;
+      text-decoration: none;
+    }
+
+    .inline-tooltip {
+      display:inline-block;
+      position: relative;
+    }
+    .inline-tooltip .content {
+      display: none;
+      position: absolute;
+      padding: 20px;
+      border-radius: 5px;
+      left: 0;
+      margin-top: 20px;
+      z-index: 99999;
+      border-style: solid;
+      border-width: .1px;
+      background-color: white;
+      box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+    }
+    .inline-tooltip:hover .content {
+      display: block;
+    }
+
+  </style>
 </head>
 <body>
 <div class="modal-wrapper">
@@ -161,8 +223,8 @@
         </div>
         </div>
         <a href="#" class="nav-link demo-link w-nav-link">View product demo</a>
-        <a href="#Pricing" class="nav-link w-nav-link">Pricing</a>
-        <a href="#Resources" class="nav-link w-nav-link">Resources</a>
+        <a href="/#Pricing" class="nav-link w-nav-link">Pricing</a>
+        <a href="/#Resources" class="nav-link w-nav-link">Resources</a>
         <a href="https://tooltip.customerly.help" target="_blank" class="nav-link w-nav-link">Help Center</a>
         <a href="https://app.tooltip.io/sign-in" class="nav-link sign-in w-nav-link">SIGN IN</a>
         <a href="https://app.tooltip.io/sign-up" class="nav-link demo w-nav-link">CREATE AN ACCOUNT</a>
@@ -173,6 +235,7 @@
       </div>
     </div>
   </div>
+
 </header>
 
 <main>
@@ -221,66 +284,5 @@
 <!-- [if lte IE 9]>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/placeholders/3.0.2/placeholders.min.js"></script>
 <![endif] -->
-<style>
-  .container-tooltip {
-    display: flex;
-    justify-content: space-between;
-    background-color: #fff;
-    padding: 10px;
-    border-radius: 8px;
-  }
-
-  .column-tooltip {
-    flex: 1;
-    margin: 0 10px;
-  }
-
-  .column-tooltip h2 {
-    color: #333;
-    font-size: 18px;
-    margin-bottom: 20px;
-    border-bottom: 2px solid #333;
-    padding-bottom: 5px;
-  }
-
-  .item-tooltip {
-    background-color: #f1f0f0;
-    border-radius: 5px;
-    padding: 10px;
-    margin-bottom: 10px;
-    font-size: 14px;
-    color: #333;
-    text-align: center;
-    cursor: pointer;
-    transition: background-color 0.3s;
-  }
-
-  .item-tooltip a {
-    color: #333;
-    text-decoration: none;
-  }
-
-  .inline-tooltip {
-    display:inline-block;
-    position: relative;
-  }
-  .inline-tooltip .content {
-    display: none;
-    position: absolute;
-    padding: 20px;
-    border-radius: 5px;
-    left: 0;
-    margin-top: 20px;
-    z-index: 99999;
-    border-style: solid;
-    border-width: .1px;
-    background-color: white;
-    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
-  }
-  .inline-tooltip:hover .content {
-    display: block;
-  }
-
-</style>
 </body>
 </html>

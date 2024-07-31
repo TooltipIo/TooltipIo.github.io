@@ -52,7 +52,70 @@
     gtag('js', new Date());
     gtag('config', 'UA-57450003-1');
   </script>
+
   <script async src="https://cdn.builder.io/js/webcomponents"></script>
+
+  <style>
+    .container-tooltip {
+      display: flex;
+      justify-content: space-between;
+      background-color: #fff;
+      padding: 10px;
+      border-radius: 8px;
+    }
+
+    .column-tooltip {
+      flex: 1;
+      margin: 0 10px;
+    }
+
+    .column-tooltip h2 {
+      color: #333;
+      font-size: 18px;
+      margin-bottom: 20px;
+      border-bottom: 2px solid #333;
+      padding-bottom: 5px;
+    }
+
+    .item-tooltip {
+      background-color: #f1f0f0;
+      border-radius: 5px;
+      padding: 10px;
+      margin-bottom: 10px;
+      font-size: 14px;
+      color: #333;
+      text-align: center;
+      cursor: pointer;
+      transition: background-color 0.3s;
+    }
+
+    .item-tooltip a {
+      color: #333;
+      text-decoration: none;
+    }
+
+    .inline-tooltip {
+      display:inline-block;
+      position: relative;
+    }
+    .inline-tooltip .content {
+      display: none;
+      position: absolute;
+      padding: 20px;
+      border-radius: 5px;
+      left: 0;
+      margin-top: 20px;
+      z-index: 99999;
+      border-style: solid;
+      border-width: .1px;
+      background-color: white;
+      box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+    }
+    .inline-tooltip:hover .content {
+      display: block;
+    }
+
+  </style>
 </head>
 <body>
 <div class="modal-wrapper">
@@ -78,9 +141,90 @@
       </a>
 
       <nav role="navigation" class="nav-menu w-nav-menu">
+        <div href="#" class="nav-link demo-link w-nav-link inline-tooltip" style="" id="solution-btn">
+          Solutions
+          <div class="content" style="right: 100px; position: fixed; left: 100px">
+            <div style="background-color: white;">
+              <div class="container-tooltip">
+                <div class="column-tooltip">
+                  <h2>Increase Sales</h2>
+                  <div class="item-tooltip">
+                    <a href="/pages/increase-sales-conversion.html">Increase Sales Conversion</a>
+                  </div>
+                  <div class="item-tooltip">
+                    <a href="/pages/reduce-cart-abandonment.html">
+                      Reduce Cart Abandonment
+                    </a>
+                  </div>
+                  <div class="item-tooltip">
+                    <a href="/pages/promote-product-offers.html">
+                      Promote Product & offers
+                    </a>
+                  </div>
+                  <div class="item-tooltip">
+                    <a href="/pages/increase-sales-on-shopify-store.html">
+                      Increase Sales on Shopify Store
+                    </a>
+                  </div>
+                </div>
+                <div class="column-tooltip">
+                  <h2>Collect Leads</h2>
+                  <div class="item-tooltip">
+                    <a href="/pages/collect-form-submission.html">Collect Form Submission</a>
+                  </div>
+                  <div class="item-tooltip">
+                    <a href="/pages/get-more-phone-calls.html">Get More Phone Calls</a>
+                  </div>
+                  <div class="item-tooltip">
+                    <a href="/pages/grow-email-list.html">Grow Email List</a>
+                  </div>
+                  <div class="item-tooltip">
+                    <a href="/pages/gamify-your-campaign.html">Gamify Your Campaign</a>
+                  </div>
+                </div>
+                <div class="column-tooltip">
+                  <h2>Connect with Visitors</h2>
+                  <div class="item-tooltip">
+                    <a href="/pages/make-announcement.html">Make Announcement</a>
+                  </div>
+                  <div class="item-tooltip">
+                    <a href="/pages/increase-user-engagement.html">Increase User Engagement</a>
+                  </div>
+                  <div class="item-tooltip">
+                    <a href="/pages/collect-feedback-surveys.html">Collect Feedback & Surveys</a>
+                  </div>
+                  <div class="item-tooltip">
+                    <a href="/pages/facilitate-social-sharing.html">Facilitate Social Sharing</a>
+                  </div>
+                </div>
+                <div class="column-tooltip">
+                  <h2>For Your Industry</h2>
+                  <div class="item-tooltip">
+                    <a href="/pages/e-commerce.html">E-commerce</a>
+                  </div>
+                  <div class="item-tooltip">
+                    <a href="/pages/travel.html">Travel</a>
+                  </div>
+                  <div class="item-tooltip">
+                    <a href="/pages/health-and-beauty.html">Health & Beauty</a>
+                  </div>
+                  <div class="item-tooltip">
+                    <a href="/pages/food-and-beverage.html">Food & Beverage</a>
+                  </div>
+                  <div class="item-tooltip">
+                    <a href="/pages/automotive.html">Automotive</a>
+                  </div>
+                  <div class="item-tooltip">
+                    <a href="/pages/">Education</a>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
         <a href="#" class="nav-link demo-link w-nav-link">View product demo</a>
-        <a href="#Pricing" class="nav-link w-nav-link">Pricing</a>
-        <a href="#Resources" class="nav-link w-nav-link">Resources</a>
+        <a href="/#Pricing" class="nav-link w-nav-link">Pricing</a>
+        <a href="/#Resources" class="nav-link w-nav-link">Resources</a>
         <a href="https://tooltip.customerly.help" target="_blank" class="nav-link w-nav-link">Help Center</a>
         <a href="https://app.tooltip.io/sign-in" class="nav-link sign-in w-nav-link">SIGN IN</a>
         <a href="https://app.tooltip.io/sign-up" class="nav-link demo w-nav-link">CREATE AN ACCOUNT</a>
@@ -91,8 +235,8 @@
       </div>
     </div>
   </div>
-</header>
 
+</header>
 <main>
   <div style="padding: 10px 100px;">
     <builder-component rev="ckzrrklrzmg" api-key=0ee6f0065aa243a599b03b0dadc08bb7 options={&quot;locale&quot;:&quot;Default&quot;} name=figma-imports entry=83e4e939444b42b28911191d3af2e3d6></builder-component>
